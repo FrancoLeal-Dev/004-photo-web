@@ -1,0 +1,354 @@
+:root {
+    /* Fuentes */
+    --fuentePrincipal: "Montserrat", sans-serif;
+    --fuenteLogo: "Comfortaa", sans-serif;
+    /* Colores */
+    --colorPrincipal: #18a0fb;
+    --colorFondo: #f5f5f5;
+    --blanco: #fff;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+body {
+    font-family: var(--fuentePrincipal);
+    background-color: var(--colorFondo);
+}
+/* Globales */
+a {
+    text-decoration: none;
+    color: var(--colorPrincipal);
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+h2 {
+    font-weight: normal;
+    font-size: 4.8rem;
+    line-height: 1.5;
+}
+h3 {
+    font-weight: bold;
+    font-size: 2.4rem;
+    line-height: 1.5;
+    margin: 0;
+}
+h4 {
+    font-weight: normal;
+    font-size: 4.8rem;
+    line-height: 1.5;
+}
+h5 {
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #000;
+}
+p {
+    font-weight: normal;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: rgba(0, 0, 0, 0.8);
+}
+/* Navegacion */
+.logo__texto {
+    font-family: var(--fuenteLogo);
+    font-weight: normal;
+    font-size: 2.8rem;
+    color: #000;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navegacion__enlaces,
+.boton--nav {
+    display: block;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.boton {
+    color: #fff;
+    background-color: var(--colorPrincipal);
+    padding: 1.1rem 3.4rem;
+    border-radius: 6px;
+    width: 90%;
+    margin: 0 auto;
+    border: 2px solid transparent;
+}
+.boton:hover {
+    background-color: #fff;
+    transition: .3s ease;
+    border: 2px solid var(--colorPrincipal);
+    color: #18a0fb;
+}
+.header {
+    background-color: var(--blanco);
+    max-width: 168rem;
+    margin: 0 auto;
+    padding-bottom: 3rem;
+}
+@media (min-width: 768px) {
+    .boton {
+        max-width: 60%;
+    }
+}
+@media (min-width: 990px) {
+    .header{
+        display: flex;
+        align-items: center;
+        padding-bottom: 0;
+    }
+    .boton {
+        width: 13rem;
+        height: 4rem;
+        margin: 0 8rem 0 0;
+    }
+    .logo {
+        padding-left: 8rem;
+    }
+    .navegacion {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        gap: 4rem;
+    }
+    .navegacion__enlaces {
+        margin-bottom: 0;
+    }
+}
+/* Contenido Principal */
+.contenedor {
+    max-width: 168rem;
+    margin: 0 auto;
+}
+.contenedorVideo {
+    display: grid;
+    aspect-ratio: 16 / 9; /* Mantiene la relación de aspecto 16:9 */
+}
+.video {
+    width: 100%;
+    height: 100%;
+}
+.titulo {
+    margin: 0;
+    padding: 12rem 8rem 6rem 8rem;
+    background-color: var(--blanco);
+    text-align: center;
+}
+.boton--alt {
+    background-color: var(--blanco);
+    color: var(--colorPrincipal);
+    border-color: var(--colorPrincipal);
+}
+.boton--alt:hover {
+    background-color: var(--colorPrincipal);
+    color: var(--blanco);
+}
+.articulo {
+    margin-left: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+a.boton.boton--alt {
+    margin: 0;
+    min-width: 16rem;
+}
+.boton--fijo {
+    width: 16rem;
+}
+.articulo__titulo {
+    margin-bottom: 2.4rem;
+}
+.articulo__texto {
+    margin-bottom: 4.3rem;
+    margin-right: 6rem;
+}
+.articulos {
+    display: grid;
+    row-gap: 7.1rem;
+    padding-bottom: 13.1rem;
+    background-color: var(--blanco);
+}
+@media (min-width: 1030px) {
+    .articulos {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 14.8rem;
+    }
+    .articulo--no-margin-left {
+        margin-left: 0;
+        margin-right: 8rem;
+    }
+}
+.seccion__imagen{
+    width: 75rem;
+    max-width: 100%;
+    height: 44rem;
+    max-height: 100%;
+    background-image: url(https://img.freepik.com/foto-gratis/hermoso-paisaje-nevado-montanas_181624-26450.jpg?w=1380&t=st=1721757669~exp=1721758269~hmac=216dff5ab94a427bbb6b8c33061e6305b6cf71c3d4c770fa0df4a529eaf69a7e);
+    margin: 0 auto;
+    background-position: center center;
+}
+.seccion__texto {
+    margin: 6rem 8.4rem 0 8.4rem;
+}
+.textoSeccion {
+    margin: 2.4rem 0 0 0;
+}
+.textoSeccion-primero {
+    margin-bottom: 8rem;
+    padding-bottom: 5rem;
+}
+.seccion {
+    background-color: var(--blanco);
+}
+.textoSeccion-ultimo {
+    margin-bottom: 8rem;
+}
+@media (min-width: 1030px) {
+    .seccion {
+        display: flex;
+        align-items: center;
+        gap: .4rem;
+    }
+    .seccion__imagen,
+    .seccion__texto {
+        flex: 1;
+    }
+    .seccion__imagen {
+        margin: 8rem;
+    }
+    .seccion__texto {
+        margin: 0 8rem 0 0;
+    }
+    .seccion-texto-inverso {
+        order: -1;
+        margin: 0 0 0 8rem;
+    }
+    .textoSeccion {
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+}
+.seccion-inversa {
+    background-color: var(--colorFondo);
+}
+.seccionImagenes{
+    background-color: var(--blanco);
+}
+.seccion__imagen--small {
+    max-width: 17.3rem;
+    max-height: 7.6rem;
+    margin: 0;
+}
+.seccionImagenes__titulo {
+    text-align: center;
+    padding-top: 12rem;
+    margin-bottom: 3rem;
+}
+.seccionImagenes__texto {
+    /* margin-bottom: 8rem; */
+    text-align: center;
+    font-size: 3.6rem;
+    max-width: 90%;
+    margin: 0 auto 8rem auto;
+}
+.seccionImagenes__imagenes {
+    max-width: 43rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 8.4rem;
+    row-gap: 6.4rem;
+    margin: 0 auto;
+    padding-bottom: 12rem;
+}
+@media (min-width: 1030px) {
+    .seccionImagenes__imagenes {
+        max-width: 94.4rem;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media (max-width: 450px) {
+    .seccionImagenes__imagenes {
+        column-gap: 2rem;
+        margin: 0 auto;
+        max-width: 36.6rem;
+    }
+}
+.contacto {
+    max-width: 168rem;
+    width: 90%;
+    min-height: 34rem;
+    margin: 0 auto;
+}
+.contacto__botones {
+    margin-bottom: 5.5rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+    text-align: center;
+}
+.contacto__texto {
+    margin: 12rem auto;
+}
+@media (min-width: 990px) {
+    .contacto {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        align-items: center;
+        column-gap: 8.4rem;
+    }
+    .boton--big {
+        width: 19.2rem;
+    }
+    .contacto__texto {
+        text-align: start;
+    }
+    .contacto__botones {
+        margin-bottom: 0;
+    }
+    .boton--big {
+        margin: 0;
+    }
+}
+@media (max-width: 420px) {
+    .contacto__botones {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* Footer */
+.footer {
+    background-color: var(--blanco);
+}
+.footerStart, .footerEnd {
+    text-align: center;
+}
+.footerStart {
+    padding-top: 3rem;
+}
+.logo--centrado {
+    margin: 0 auto;
+    padding: 0;
+}
+.footerEnd {
+    padding-bottom: 3rem;
+}
+@media (min-width: 990px) {
+    .footer, .footerStart, .footerEnd {
+        display: flex;
+        padding: 0;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 5rem;
+    }
+    .logo--centrado {
+        margin: 0;
+    }
+}
